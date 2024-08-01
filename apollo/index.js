@@ -13,6 +13,9 @@ const resolvers = {
     courses() {
       return data.courses;
     },
+    student(_, args) {
+      return data.students.find((student) => student.student_id === args?.id);
+    },
   },
 };
 

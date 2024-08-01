@@ -13,6 +13,7 @@ module.exports.typeDefs = `#graphql
     }
     type Query {
         students: [Student],
-        courses: [Course]
+        courses: [Course],
+        student(id: String!): Student,
     }
 `;
