@@ -16,6 +16,9 @@ const resolvers = {
     student(_, args) {
       return data.students.find((student) => student.student_id === args?.id);
     },
+    course(_, args) {
+      return data.courses.find((course) => course.course_id === args?.id);
+    },
   },
 };
 

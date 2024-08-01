@@ -15,5 +15,6 @@ module.exports.typeDefs = `#graphql
         students: [Student],
         courses: [Course],
         student(id: String!): Student,
+        course(id: String!): Course
     }
 `;
