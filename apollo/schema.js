@@ -14,6 +14,5 @@ module.exports.typeDefs = `#graphql
     type Query {
         students: [Student],
         courses: [Course]
-
     }
 `;

@@ -4,6 +4,7 @@ const { startStandaloneServer } = require("@apollo/server/standalone");
 const { typeDefs } = require("./schema");
 const { data } = require("../db/sample-data");
 
+// the resolver args* instance
 const resolvers = {
   Query: {
     students() {
@@ -20,7 +21,7 @@ const server = new ApolloServer({
   resolvers,
 });
 
-const { url } = await startStandaloneServer(server, {
+const { url } = startStandaloneServer(server, {
   listen: { port: process.env.APOLLO_SERVER_PORT },
 });
 
